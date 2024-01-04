@@ -1,9 +1,9 @@
-import React from 'react';
-import { Toaster } from 'react-hot-toast';
-import PageTitle from './components/PageTitle.js';
-import styles from './styles/modules/app.module.scss';
-import AppHeader from './components/AppHeader.js';
-import AppContent from './components/AppContent.js';
+import React from 'react'
+import { Toaster } from 'react-hot-toast'
+import PageTitle from './components/PageTitle.js'
+import styles from './styles/modules/app.module.scss'
+import AppHeader from './components/AppHeader.js'
+import AppContent from './components/AppContent.js'
 
 function App() {
 	return (
@@ -25,7 +25,7 @@ function App() {
 				}}
 			/>
 		</>
-	);
+	)
 }
 
-export default App;
+export default App

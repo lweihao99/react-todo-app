@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import Button, { SelectButton } from './Button';
-import styles from '../styles/modules/app.module.scss';
-import TodoModal from './TodoModal';
-import { updateFilterStatus } from '../slices/todoSlice';
+import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import Button, { SelectButton } from './Button'
+import styles from '../styles/modules/app.module.scss'
+import TodoModal from './TodoModal'
+import { updateFilterStatus } from '../slices/todoSlice'
 
 function AppHeader() {
-	const [modalOpen, setModalOpen] = useState(false);
+	const [modalOpen, setModalOpen] = useState(false)
 	// use useSelector hook to select redux state status tree and get the value of fileterstatus
-	const filterStatus = useSelector((state) => state.todo.filterStatus);
+	const filterStatus = useSelector((state) => state.todo.filterStatus)
 	// const [filterStatus, setFilterStatus] = useState(initialFilterStatus);
-	const dispatch = useDispatch();
+	const dispatch = useDispatch()
 
 	// dispatch = 分派 = 将一个action 传递给redux 以触发state的更新过程
 	const updateFilter = (event) => {
 		// 将事件目标event的目标值作为action.payload的值传递给 updateFileterStatus 的action 然后触发方法进行state更新
-		dispatch(updateFilterStatus(event.target.value));
-	};
+		dispatch(updateFilterStatus(event.target.value))
+	}
 
 	return (
 		<div className={styles.appHeader}>
@@ -31,6 +31,6 @@ function AppHeader() {
 			</SelectButton>
 			<TodoModal type="add" modalOpen={modalOpen} setModalOpen={setModalOpen} />
 		</div>
-	);
+	)
 }
-export default AppHeader;
+export default AppHeader

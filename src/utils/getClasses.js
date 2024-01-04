@@ -1,8 +1,8 @@
-export const getClasses = classes =>
+export const getClasses = (classes) =>
 	classes
-		.filter(item => item !== '')
+		.filter((item) => item !== '')
 		.join(' ')
-		.trim();
+		.trim()
 
 // 过滤空字符类名,确保只有非空的类名被保留
 // join将过滤后保留的类名组合成一个字符串，然后每个类名之间用空格分隔
